@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Shashank Weds Ekta</title>
+<meta name="description" content="You are invited to the wedding of Shashank Tripathi and Ekta Shukla. Monday, 7th December 2026, Richa Solitaire, Kanpur.">
+<meta property="og:title" content="Shashank Weds Ekta">
+<meta property="og:description" content="Join us for the wedding celebrations · 3rd to 8th December 2026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400&family=Noto+Serif+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#4fb08e; --teal-d:#2f8a6c;
+  --lilac:#d9a3dc; --lilac-d:#b873bd;
+  --lime:#c6d46b; --lime-d:#8e9a2f;
+  --night:#1b1f4d; --night-2:#34306b;
+  --cream:#f7f0c4; --ink:#2a2a1f; --gold:#c9a24a;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+.btn{display:inline-block;font-family:var(--sans);font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;padding:13px 26px;border:1px solid var(--cream);border-radius:99px;color:var(--cream);background:transparent;cursor:pointer;transition:.25s}
+.btn:hover{background:var(--cream);color:var(--ink)}
+.btn.solid{background:var(--cream);color:var(--ink)}
+.btn.solid:hover{background:transparent;color:var(--cream)}
+body{background:var(--teal);font-family:var(--serif);color:var(--cream);background:var(--teal);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+section{position:relative;padding:96px 20px;overflow:hidden}
+.pattern{background-image:url(assets/damask.jpg);background-size:180px}
+h1,h2,h3{font-weight:400;line-height:1.05}
+.eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;opacity:.85;margin-bottom:14px}
+.center{text-align:center}
+.wrap{max-width:1000px;margin:0 auto}
+
+/* reveal */
+.rv{opacity:.2;transform:translateY(36px);transition:opacity 1s ease,transform 1s ease}
+.rv.l{transform:translateX(-50px)} .rv.r{transform:translateX(50px)} .rv.z{transform:scale(.92)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* HERO: pinned stage; car follows the painted road, names rise from below */
+#hero{height:270vh;padding:0;overflow:visible;background:#d9915f}
+#hero .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#c9805a}
+#hero .scene{position:absolute;left:50%;bottom:0;width:max(100vw,calc(100svh * 1.4858));aspect-ratio:1569/1056;transform:translateX(-50%);transform-origin:50% 100%;will-change:transform}
+#hero .palace{position:absolute;inset:0;width:100%;height:100%}
+#hero .carpos{position:absolute;left:50%;top:100%;width:min(40%,88vw);transform-origin:50% 100%;will-change:transform}
+#hero .carin{transform-origin:50% 100%;animation:carDrive 2.6s both}
+#hero .carin img{display:block;width:100%;max-width:none;filter:drop-shadow(0 18px 18px rgba(0,0,0,.4));animation:carBounce 2.6s linear both;transform-origin:50% 100%}
+/* drives in on an arc: starts big and close to the camera, turning in (yaw), decelerates, small nose-dip when it brakes */
+@keyframes carDrive{
+  0%{transform:perspective(1300px) translate3d(-92vw,5vh,0) scale(1.3) rotateY(-32deg) rotateZ(-5deg);filter:blur(7px);animation-timing-function:cubic-bezier(.2,.6,.3,1)}
+  38%{transform:perspective(1300px) translate3d(-50vw,3vh,0) scale(1.22) rotateY(-18deg) rotateZ(-3deg);filter:blur(3px);animation-timing-function:cubic-bezier(.25,.6,.3,1)}
+  74%{transform:perspective(1300px) translate3d(2.2vw,.4vh,0) scale(1.05) rotateY(4deg) rotateZ(.8deg);filter:blur(0);animation-timing-function:ease-in-out}
+  86%{transform:perspective(1300px) translate3d(-.7vw,0,0) scale(1) rotateY(-1deg) rotateX(1.6deg) rotateZ(-.2deg);animation-timing-function:ease-out}
+  100%{transform:perspective(1300px) none;filter:blur(0)}
+}
+/* suspension bounce while rolling, fading out as it stops */
+@keyframes carBounce{0%,100%{transform:none}8%{transform:translateY(-7px) rotate(-.4deg)}16%{transform:translateY(3px) rotate(.3deg)}24%{transform:translateY(-6px) rotate(-.3deg)}32%{transform:translateY(2px)}40%{transform:translateY(-4px) rotate(-.2deg)}50%{transform:translateY(1.5px)}60%{transform:translateY(-2.5px)}72%{transform:translateY(1px)}85%{transform:translateY(-1px)}}
+/* camera pans with the car */
+#hero .palace{animation:camPan 2.9s cubic-bezier(.22,.7,.25,1) both}
+@keyframes camPan{0%{transform:translateX(4%) scale(1.1)}100%{transform:none}}
+.namesin{animation:namesIn 2.4s cubic-bezier(.16,.8,.24,1) .55s both}
+@keyframes namesIn{0%{transform:translateY(42vh) rotate(-10deg);opacity:0}40%{opacity:1}100%{transform:none;opacity:1}}
+@media(prefers-reduced-motion:reduce){#hero .carin,#hero .carin img,#hero .palace,.namesin{animation:none}}
+@media(prefers-reduced-motion:reduce){#hero .carin,.namesin{animation:none}}
+.hero-eyebrow{position:absolute;z-index:3;left:0;right:0;top:calc(9vh + 56px);text-align:center;font-family:var(--sans);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--cream);text-shadow:0 1px 8px rgba(90,35,20,.7)}
+.hero-title{position:absolute;z-index:3;left:0;right:0;top:calc(9vh + 90px);text-align:center;will-change:transform,opacity;padding-inline:16px}
+.hero-title h1{font-size:clamp(2.6rem,min(10vw,12vh),6.5rem);text-shadow:0 2px 6px rgba(90,35,20,.55),0 2px 28px rgba(90,35,20,.5)}
+.hero-title .weds{font-family:var(--sans);letter-spacing:.7em;font-size:.8rem;margin:6px 0 4px;padding-left:.7em;text-shadow:0 1px 8px rgba(90,35,20,.7)}
+.hero-title p{text-shadow:0 1px 8px rgba(90,35,20,.7);margin-top:16px;font-style:italic;font-size:1.2rem}
+.scroll-cue{position:absolute;z-index:5;left:50%;bottom:14px;transform:translateX(-50%);font-family:var(--sans);font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;animation:bob 2s infinite;transition:opacity .3s;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+@keyframes bob{50%{transform:translate(-50%,6px)}}
+
+#hero .carlayer{z-index:2;pointer-events:none}
+/* BLESSINGS */
+#pBless{background-color:var(--teal);margin-top:-100vh;z-index:5;border-radius:28px 28px 0 0;box-shadow:0 -20px 40px rgba(0,0,0,.25);min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(18px,4vh,36px);text-align:center;padding:90px 20px}
+#pBless .shri{font-family:'Noto Serif Devanagari',var(--serif);font-size:clamp(1.5rem,5vw,2.4rem);color:var(--cream);text-shadow:0 2px 14px rgba(0,60,40,.35)}
+#pBless .ganesh{width:min(54vw,230px);height:auto;filter:drop-shadow(0 14px 18px rgba(0,50,35,.35))}
+#pBless .verse{display:flex;flex-direction:column;gap:6px;font-family:'Noto Serif Devanagari',var(--serif);font-size:clamp(.95rem,3.4vw,1.35rem);line-height:1.8;max-width:34em}
+#pBless .verse span{display:block}
+#blessings{background-color:var(--teal);padding-top:96px}
+.ganesh{width:84px;margin:0 auto 20px;color:var(--cream)}
+.om{font-size:.8rem;font-family:var(--sans);letter-spacing:.2em;margin-bottom:12px}
+.small{font-size:1.1rem;line-height:1.7}
+.rule{width:60px;height:1px;background:var(--cream);margin:22px auto;opacity:.6}
+#blessings h2{font-size:clamp(2.6rem,9vw,4.6rem);letter-spacing:.14em;margin:6px 0 12px}
+#blessings .name{font-size:clamp(3.4rem,13vw,7.5rem);line-height:1}
+#blessings .and{font-style:italic;font-size:1.6rem;margin:6px 0}
+.flower{position:absolute;width:150px;opacity:.9;pointer-events:none}
+.flower.a{left:-40px;top:60px;transform:rotate(-20deg)}
+.flower.b{right:-40px;bottom:60px;transform:rotate(150deg)}
+
+/* EVENTS */
+#events{background-color:var(--teal-d);background-blend-mode:multiply}
+#events h2{font-size:clamp(2.2rem,7vw,3.6rem);text-align:center;margin-bottom:10px}
+.cards{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;gap:56px 34px;margin-top:56px;max-width:760px;margin-inline:auto}
+@media(min-width:640px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* event card: teal ring > pale panel with double gold line; illustration fills the top, details sit on the pale base; flowers on two corners */
+.ev{position:relative;width:min(100%,330px);aspect-ratio:1/1.42;padding:11px;border-radius:50%/36%;background:radial-gradient(circle at 30% 20%,#5cc0a0,#2f9477);box-shadow:0 22px 36px rgba(0,40,28,.38),inset 0 0 0 1px rgba(255,255,255,.25);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.ev:hover{transform:translateY(-10px)}
+.ev-in{position:relative;width:100%;height:100%;border-radius:50%/35%;overflow:hidden;background:linear-gradient(180deg,#eef2b4,#d6e08d);color:#2f8a6c;text-align:center}
+.ev-in:before,.ev-in:after{content:"";position:absolute;border-radius:50%/35%;border:1px solid #d8c26b;z-index:3;pointer-events:none}
+.ev-in:before{inset:6px}.ev-in:after{inset:10px;opacity:.8}
+.ev-art{position:absolute;inset:0 0 auto 0;height:67%;background:#e9d9a0}
+.ev-art img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform 1.2s ease}
+.ev:hover .ev-art img{transform:scale(1.06)}
+.ev-art:after{content:"";position:absolute;inset:auto 0 0 0;height:22%;background:linear-gradient(transparent,#e3ec9f)}
+.ev-txt{position:absolute;inset:auto 0 0 0;padding:0 8% 9.5%;display:flex;flex-direction:column;align-items:center;gap:2px;z-index:2}
+.ev-txt h3{font-size:clamp(1.35rem,4.6vw,1.7rem);letter-spacing:.1em;white-space:nowrap;text-align:center;text-transform:uppercase;color:#2f9477;margin-bottom:4px}
+.ev-txt p{font-family:var(--serif);font-size:.95rem;line-height:1.35;color:#2f7f68;font-weight:500}
+.ev-txt a{font-family:var(--serif);font-weight:500;font-size:1rem;margin-top:8px;color:#2a7d65;text-decoration:underline;text-underline-offset:3px}
+.ev .fl{position:absolute;width:34%;z-index:4;pointer-events:none;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.ev .fl.tr{right:-9%;top:-4%;transform:rotate(12deg)}
+.ev .fl.bl{left:-10%;bottom:-3%;transform:rotate(-155deg)}
+.ev-mono{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 40%,#5a3b78,#2d1d46)}
+.ev-mono svg{width:56%;filter:drop-shadow(0 6px 10px rgba(0,0,0,.4))}
+
+/* ROUTE */
+#route{background:linear-gradient(180deg,rgba(47,138,108,.5),rgba(79,176,142,.2) 55%,transparent 55%),url(assets/damask.jpg) 0 0/180px,var(--teal);min-height:90vh;padding-bottom:0}
+#route h2{font-size:clamp(2.6rem,9vw,5rem);letter-spacing:.1em}
+#route p{font-family:var(--sans);font-size:.8rem;margin:12px 0 22px}
+.ring{width:64px;height:64px;border-radius:50%;border:1px solid var(--cream);margin:0 auto 30px;position:relative}
+.ring:after{content:"";position:absolute;inset:12px;border:2px solid var(--cream);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:1}100%{transform:scale(1.5);opacity:0}}
+.car-front{width:min(80%,420px);margin:0 auto;position:relative;z-index:2}
+.car-front svg{width:100%;height:auto;filter:drop-shadow(0 20px 20px rgba(0,0,0,.3))}
+
+/* COUPLE */
+#couple{
+  background:linear-gradient(180deg,rgba(47,138,108,.5),rgba(79,176,142,.2) 55%,transparent 55%),url(assets/damask.jpg) 0 0/180px,var(--teal);
+  color:#fff;
+}
+#couple h2,#couple .eyebrow,#couple .story,#couple .frame figcaption{color:#7a2e4d}
+#couple .fam div{background:rgba(255,255,255,.55);color:#7a2e4d;border-color:rgba(122,46,77,.25)}
+#couple .frame .arch{background:linear-gradient(160deg,#f6c9d6,#e58aa6)}
+.story{font-size:1.2rem;line-height:1.75;max-width:640px;margin:22px auto 0}
+.frame-row{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;padding:46px 8vw 20px;margin:0 -20px;-webkit-overflow-scrolling:touch}
+.frame{flex:0 0 min(70vw,300px);scroll-snap-align:center}
+.frame .arch{aspect-ratio:3/4.4;border-radius:46% 46% 8% 8%/30% 30% 4% 4%;border:10px solid var(--cream);box-shadow:0 0 0 2px var(--gold),0 18px 30px rgba(80,30,90,.35);background:linear-gradient(160deg,#e8c6ea,#a766b1);display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;color:#fff;overflow:hidden}
+.frame .arch img{width:100%;height:100%;object-fit:cover}
+.frame figcaption{text-align:center;font-style:italic;margin-top:14px;font-size:1.1rem}
+
+/* couple photos */
+.frame .arch.photo{padding:0;background:#f6c9d6}
+.frame .arch.photo img{object-position:50% 18%}
+.frame figcaption small{display:block;font-family:var(--sans);font-style:normal;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;margin-top:6px;opacity:.85}
+.frame-row.two{gap:34px}
+
+/* RSVP */
+#rsvp{background:var(--lilac);padding-top:40px}
+#rsvp h2{font-size:clamp(2.6rem,9vw,4.8rem);letter-spacing:.1em}
+#rsvp p{font-family:var(--sans);font-size:.85rem;margin:14px 0 26px}
+.wa{display:inline-flex;align-items:center;gap:10px}
+#rsvp .vintage{width:min(60%,260px);margin:44px auto 0;opacity:.9}
+
+/* THINGS */
+#know{background:var(--lime);color:#4a5316;background-image:radial-gradient(circle at 80% 20%,rgba(255,255,255,.25),transparent 40%)}
+#know h2{font-size:clamp(2.4rem,8vw,4.4rem);letter-spacing:.08em;text-transform:uppercase;color:#59631b}
+#know .lead{max-width:600px;margin:18px auto 0;font-size:1.2rem;line-height:1.7}
+.tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:46px}
+@media(min-width:760px){.tiles{grid-template-columns:repeat(4,1fr)}}
+.tile{padding:26px 14px;border:1px solid rgba(74,83,22,.35);border-radius:18px;text-align:center;background:rgba(255,255,255,.25);transition:.3s}
+.tile:hover{transform:translateY(-6px);background:rgba(255,255,255,.45)}
+.tile svg{width:42px;height:42px;stroke:#59631b;fill:none;stroke-width:1.5;margin:0 auto 12px}
+.tile h3{font-family:var(--sans);font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+.tile p{font-family:var(--sans);font-weight:300;font-size:.8rem;line-height:1.6}
+
+/* COUNTDOWN */
+#count{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(180deg,#2a2a78 0%,#4a3f86 40%,#7b5d86 75%,#c08a6c 100%);padding-bottom:0}
+.stars{position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 10% 20%,#fff,transparent),radial-gradient(1.5px 1.5px at 40% 10%,#fff,transparent),radial-gradient(2px 2px at 70% 25%,#fff,transparent),radial-gradient(1px 1px at 85% 8%,#fff,transparent),radial-gradient(1.5px 1.5px at 25% 40%,#fff,transparent),radial-gradient(1px 1px at 92% 38%,#fff,transparent);animation:tw 4s infinite alternate}
+@keyframes tw{to{opacity:.4}}
+.moon{position:absolute;right:12%;top:90px;width:54px;height:54px;border-radius:50%;box-shadow:inset -14px 0 0 0 #f7f0c4;transform:rotate(-20deg)}
+#count h2{font-size:clamp(2rem,6vw,3.2rem);font-style:italic;position:relative;z-index:2}
+.clock{display:flex;justify-content:center;gap:clamp(12px,4vw,36px);margin:22px 0 0;font-family:var(--sans);position:relative;z-index:2}
+.clock div{min-width:64px}
+.clock b{display:block;font-family:var(--serif);font-size:clamp(2.2rem,8vw,4rem);font-weight:400}
+.clock span{font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;opacity:.8}
+.night-scene{position:relative;margin-inline:-20px;height:min(52vh,420px);margin-top:30px}
+.night-scene img.pal{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 75%;filter:hue-rotate(205deg) saturate(.9) brightness(.55) contrast(1.15);-webkit-mask-image:linear-gradient(transparent,#000 22%);mask-image:linear-gradient(transparent,#000 22%)}
+.night-scene .car{animation:none;right:50%;transform:translateX(50%);bottom:-6%;width:min(80%,520px)}
+
+footer{background:#10122f;text-align:center;padding:50px 20px 40px}
+footer h3{font-size:2rem;letter-spacing:.06em}
+footer p{font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin:10px 0 22px}
+footer small{display:block;margin-top:26px;font-family:var(--sans);font-size:.68rem;opacity:.5}
+
+/* ---- additions for Shashank & Ekta ---- */
+.ev-txt h3.sm{font-size:1.18rem;line-height:1.2;white-space:normal;letter-spacing:.08em}
+.ev-txt p small{display:block;font-size:.86rem;opacity:.85}
+.note{max-width:620px;margin:56px auto 0;text-align:center;font-size:1.25rem;line-height:1.6;font-style:italic;padding:20px 26px;border:1px solid rgba(247,240,196,.45);border-radius:18px;background:rgba(0,0,0,.12)}
+.note b{font-style:normal;font-family:var(--sans);font-weight:400;letter-spacing:.2em;font-size:.75rem;text-transform:uppercase;display:block;margin-bottom:6px}
+#blessings .name small{display:block;font-family:var(--sans);font-size:.85rem;letter-spacing:.45em;text-transform:uppercase;margin-top:10px;opacity:.9;padding-left:.45em}
+#route .venues{display:flex;flex-wrap:wrap;justify-content:center;gap:34px 60px;margin-top:10px;position:relative;z-index:2}
+#route .venue{display:block;width:min(100%,290px);text-decoration:none}
+#route .venue h3{font-size:1.9rem;letter-spacing:.12em;text-transform:uppercase}
+#route .venue span{display:block;font-family:var(--sans);font-size:.8rem;line-height:1.7;opacity:.92;margin-top:6px}
+#route .venue .ring{margin-bottom:16px}
+#route .venue em{display:block;font-family:var(--sans);font-style:normal;font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;margin-top:8px;opacity:.8}
+.frame .arch{flex-direction:column;gap:8px;color:#fff;font-family:var(--serif);letter-spacing:0;font-size:1rem;line-height:1.5}
+.frame .arch .ini{font-size:5.4rem;line-height:1;font-style:italic;text-shadow:0 4px 18px rgba(80,30,90,.45)}
+.frame .arch .nm{font-family:var(--sans);font-size:.78rem;letter-spacing:.3em;text-transform:uppercase}
+.frame .arch .rel{font-size:1.02rem;opacity:.95;max-width:15em}
+.frame-row.two{justify-content:center;overflow:visible;flex-wrap:wrap}
+.fam{max-width:760px;margin:26px auto 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;text-align:center}
+.fam div{background:rgba(80,30,90,.3);border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:26px 18px}
+.fam h3{font-family:var(--sans);font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;margin-bottom:14px}
+.fam p{font-size:1.15rem;line-height:1.7}
+.ctc{font-family:var(--sans);font-size:.82rem;margin-top:30px;line-height:1.9;opacity:.9}
+.ctc a{text-decoration:none;border-bottom:1px solid currentColor}
+.tile a{color:inherit}
+
+/* ---- Hindi + animation layer ---- */
+.hi{font-family:'Noto Serif Devanagari','Cormorant Garamond',serif;letter-spacing:0!important;text-transform:none!important;line-height:1.9}
+.ev-txt h3.hi{font-size:1.35rem;line-height:1.35;font-weight:600;letter-spacing:0}
+.ev-txt h3.hi.sm{font-size:1.08rem;line-height:1.45}
+.wr .w{display:inline-block;opacity:0;transform:translateY(.7em);filter:blur(7px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1),filter .9s ease;transition-delay:min(calc(var(--i)*.08s),2.6s)}
+.wr.in .w{opacity:1;transform:none;filter:none}
+@media(prefers-reduced-motion:reduce){.wr .w{opacity:1;transform:none;filter:none;transition:none}}
+.rel-hi{font-family:'Noto Serif Devanagari',serif;font-size:1.02rem;line-height:1.9;letter-spacing:0}
+#blessings .name .hn{display:block;font-family:'Noto Serif Devanagari',serif;font-size:1.5rem;letter-spacing:0;text-transform:none;margin-top:8px;opacity:1;padding:0}
+#pBless{overflow:hidden}
+#pBless .halo{position:absolute;left:50%;top:50%;width:min(130vw,820px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;background:repeating-conic-gradient(from 0deg,rgba(247,240,196,.16) 0 6deg,transparent 6deg 18deg);-webkit-mask-image:radial-gradient(circle,#000 8%,transparent 66%);mask-image:radial-gradient(circle,#000 8%,transparent 66%);animation:spin 60s linear infinite}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+#pBless>*:not(.halo){position:relative;z-index:1}
+#pBless .ganesh{animation:floaty 5s ease-in-out infinite}
+@keyframes floaty{50%{translate:0 -10px}}
+#pBless .shri{font-weight:600}
+.mantra{font-size:clamp(1.25rem,5vw,2.1rem)!important;line-height:2!important;font-weight:500;color:#fff8d6}
+.mantra .w{transition-duration:1.5s;transition-delay:calc(var(--i)*.3s + .6s)}
+.mantra.in .w{animation:glow 3.6s ease-in-out infinite;animation-delay:calc(var(--i)*.25s + 3s)}
+@keyframes glow{0%,100%{text-shadow:0 0 0 rgba(247,220,120,0)}50%{text-shadow:0 0 18px rgba(255,226,130,.95),0 0 34px rgba(255,190,80,.55)}}
+.mantra span.l{display:block}
+.car-front img{width:100%;height:auto;filter:drop-shadow(0 20px 20px rgba(0,0,0,.3))}
+.slideL img,.slideR img{transition:transform 2.8s cubic-bezier(.12,.75,.2,1)}
+.slideL img{transform:translateX(-100vw)}
+.slideR img{transform:translateX(100vw)}
+.slideL.in img,.slideR.in img{transform:none}
+#rsvp .vintage{width:min(52%,230px);margin:44px auto 0}
+#rsvp .vintage img{width:100%;height:auto;filter:drop-shadow(0 16px 16px rgba(0,0,0,.3))}
+#count{padding:0;min-height:max(100svh,700px);justify-content:flex-start;background:#141538}
+#count .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%}
+#count:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,14,50,.78) 0%,rgba(14,14,50,.45) 38%,transparent 62%)}
+#count .top{position:relative;z-index:4;padding:84px 20px 0}
+#count .fin{font-size:clamp(2.6rem,9vw,5.6rem);letter-spacing:.04em;text-shadow:0 3px 24px rgba(0,0,30,.7)}
+#count .fin em{display:block;font-family:var(--sans);font-style:normal;letter-spacing:.7em;font-size:.8rem;margin:6px 0 4px;padding-left:.7em}
+#count .when{font-family:var(--sans);font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;margin-top:14px;opacity:.9;text-shadow:0 1px 8px rgba(0,0,30,.8)}
+#count .clock{margin-top:26px}
+#count .clock b{text-shadow:0 2px 14px rgba(0,0,30,.7)}
+#count .fcar{position:absolute;z-index:3;left:50%;bottom:-5%;width:min(92vw,880px);transform:translateX(-50%)}
+#count .fcar .drive{position:relative;transform:translateX(120vw);will-change:transform}
+#count .fcar.go .drive{animation:arrive 7.5s cubic-bezier(.1,.7,.2,1) forwards}
+#count .fcar img{display:block;width:100%;height:auto;filter:drop-shadow(0 22px 22px rgba(0,0,0,.55))}
+#count .fcar.go img{animation:carBounce 7.5s linear both;transform-origin:50% 100%}
+#count .fcar .glow{position:absolute;left:8%;top:44%;width:84%;height:30%;background:radial-gradient(ellipse at 20% 50%,rgba(255,220,130,.55),transparent 40%),radial-gradient(ellipse at 80% 50%,rgba(255,220,130,.55),transparent 40%);opacity:0;mix-blend-mode:screen;pointer-events:none}
+#count .fcar.go .glow{animation:headl 7.5s ease forwards}
+@keyframes arrive{0%{transform:translateX(120vw) scale(.9)}70%{transform:translateX(5vw) scale(.98)}88%{transform:translateX(-1vw)}100%{transform:none}}
+@keyframes headl{0%,40%{opacity:0}100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){#count .fcar .drive,#count .fcar.go .drive{animation:none;transform:none}}
+
+#pBless .verse .w{display:inline-block}
+#pBless .shri .w{display:inline-block}
+#count .top{padding-top:64px}
+#count .fin{font-size:clamp(2.6rem,8vw,4.4rem)}
+@media(min-width:760px){#count .fin em{display:inline-block;margin:0 .9em;font-size:.85rem}#count .clock{margin-top:20px}}
+#count .fcar{width:clamp(340px,64vw,920px);bottom:-9%;z-index:2}
+@media(max-width:600px){#count .fcar{bottom:0;width:112vw}}
+
+/* big cars rising from the bottom edge, cropped by the section */
+#route{padding-bottom:0}
+#route .car-front{width:clamp(300px,66vw,760px)!important;margin:40px auto 0!important;position:relative;top:calc(clamp(300px,66vw,760px)*.24)}
+#route{overflow:visible;z-index:4;padding-bottom:0}
+#couple{padding-top:calc(96px + clamp(300px,66vw,760px)*.24)}
+#rsvp{padding-bottom:0}
+#rsvp .vintage{width:clamp(230px,44vw,440px)!important;margin:48px auto 0!important;position:relative;top:calc(clamp(230px,44vw,440px)*.42)}
+#rsvp{overflow:visible;z-index:4;padding-bottom:0}
+#know{padding-top:calc(70px + clamp(230px,44vw,440px)*.42)}
+#rsvp{
+  background:url(assets/rsvp-bg.jpg) center/cover no-repeat;
+}
+/* background music */
+#musicBtn{position:fixed;right:16px;bottom:16px;z-index:100;width:46px;height:46px;border-radius:50%;border:1px solid rgba(247,240,196,.7);background:rgba(27,31,77,.62);color:var(--cream);display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(0,0,0,.3);transition:.25s}
+#musicBtn:hover{background:rgba(27,31,77,.85)}
+#musicBtn svg{width:22px;height:22px}
+#musicBtn .off{display:none}
+#musicBtn.muted .on{display:none}#musicBtn.muted .off{display:block}
+</style>
+</head>
+<body>
+<audio id="bgm" src="assets/music.mp3" loop preload="auto"></audio>
+<button id="musicBtn" type="button" aria-label="Pause music" title="Music on/off">
+  <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
+  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/><path d="M3 3l18 18"/></svg>
+</button>
+
+<section id="hero"><div class="stage">
+  <div class="scene" id="scene">
+    <img class="palace" src="assets/palace.jpg" alt="Painted palace at sunset with a paved road in front">
+  </div>
+  <p class="hero-eyebrow">Save the Date</p>
+  <div class="hero-title" id="names"><div class="namesin">
+    <h1>Shashank</h1>
+    <div class="weds">WEDS</div>
+    <h1>Ekta</h1>
+    <p>Monday, 7th December 2026 · Kanpur</p>
+  </div></div>
+  <!-- car layer: same geometry as the scene, but stacked above the title text -->
+  <div class="scene carlayer" id="scene2">
+    <div class="carpos" id="car"><div class="carin"><img src="assets/car-save-the-date.png" alt="Vintage teal car with a number plate that reads Save the Date"></div></div>
+  </div>
+  <div class="scroll-cue">Scroll ↓</div>
+</div></section>
+
+<section class="page pattern" id="pBless">
+  <div class="halo"></div>
+  <p class="col shri hi wr">॥ श्री गणेशाय नमः ॥</p>
+  <img class="ganesh rv z d1" alt="Lord Ganesha" src="assets/ganesh.png">
+  <p class="col verse mantra hi wr"><span class="l">वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ।</span><span class="l">निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥</span></p>
+</section>
+
+<section id="blessings" class="pattern center">
+  <img class="flower a" src="assets/flowers.png" alt="">
+  <img class="flower b" src="assets/flowers.png" alt="">
+  <div class="wrap">
+    <p class="small rv d1">With the blessings of<br><span class="hi">श्रीमती मधु त्रिपाठी एवं स्व० श्री राम कृष्ण त्रिपाठी</span></p>
+    <div class="rule rv"></div>
+    <h2 class="rv">INVITE</h2>
+    <p class="small rv"><span class="hi">श्रीमती अर्चना त्रिपाठी एवं श्री अखिलेश चन्द्र त्रिपाठी</span><br>solicit your blessings and request your presence<br>to celebrate the wedding ceremony of their beloved son</p>
+    <div class="name rv l">Shashank<small>Tripathi</small><span class="hn hi">चि. शशांक त्रिपाठी</span></div>
+    <p class="small hi rv" style="margin-top:8px">सुपौत्र श्रीमती मधु त्रिपाठी एवं स्व० राम कृष्ण त्रिपाठी<br>सुपुत्र श्रीमती अर्चना त्रिपाठी एवं श्री अखिलेश चन्द्र त्रिपाठी</p>
+    <div class="and rv" style="margin:18px 0 6px">weds</div>
+    <div class="name rv r">Ekta<small>Shukla</small><span class="hn hi">आयु. एकता शुक्ला</span></div>
+    <p class="small hi rv" style="margin-top:8px">सुपौत्री स्व० माधुरी शुक्ला एवं स्व० रमेश चन्द्र शुक्ला<br>सुपुत्री श्रीमती रेखा शुक्ला एवं श्री सुशील शुक्ला</p>
+    <p class="small rv" style="margin-top:30px;font-style:italic">Programme of the celebrations</p>
+  </div>
+</section>
+
+<section id="events" class="pattern">
+  <div class="wrap">
+    <p class="eyebrow center rv">Save these dates</p>
+    <h2 class="rv">The Celebrations</h2>
+    <div class="cards">
+      <article class="ev rv"><img class="fl tr" src="assets/flowers.png" alt=""><img class="fl bl" src="assets/flowers.png" alt="">
+        <div class="ev-in"><div class="ev-art"><img src="assets/ev-haldi.jpg" alt="Illustration of the couple applying a ceremonial tilak"></div>
+          <div class="ev-txt"><h3 class="hi">तिलकोत्सव</h3><p>Thu, 3rd Dec 2026 · 6:00 PM<br>Vasundhara Lawn, Lucknow</p><a href="#route">See the route</a></div></div></article>
+      <article class="ev rv d1"><img class="fl tr" src="assets/flowers.png" alt=""><img class="fl bl" src="assets/flowers.png" alt="">
+        <div class="ev-in"><div class="ev-art"><img src="assets/ev-mehendi.jpg" alt="Illustration of the couple admiring henna-painted hands"></div>
+          <div class="ev-txt"><h3 class="hi sm">मातृ पूजन,<br>हल्दी एवं मेहंदी</h3><p>Sun, 6th Dec 2026 · 2:00 PM<br>Venue shared by the family</p><a href="#rsvp">Contact the family</a></div></div></article>
+      <article class="ev rv"><img class="fl tr" src="assets/flowers.png" alt=""><img class="fl bl" src="assets/flowers.png" alt="">
+        <div class="ev-in"><div class="ev-art"><img src="assets/ev-shaadi.jpg" alt="Illustration of the couple exchanging garlands"></div>
+          <div class="ev-txt"><h3 class="hi">शुभ विवाह</h3><p>Mon, 7th Dec 2026 · Barat 2:00 PM<br>Richa Solitaire, Kanpur</p><a href="#route">See the route</a></div></div></article>
+      <article class="ev rv d1"><img class="fl tr" src="assets/flowers.png" alt=""><img class="fl bl" src="assets/flowers.png" alt="">
+        <div class="ev-in"><div class="ev-art"><img src="assets/reception.png" alt="Illustration of the couple seated together under palace arches"></div>
+          <div class="ev-txt"><h3 class="hi">वधू आगमन</h3><p>Tue, 8th Dec 2026<br>Welcoming the bride home</p><a href="#rsvp">Contact the family</a></div></div></article>
+    </div>
+    <div class="note rv"><b>Please note</b>The Barat will proceed from our residence to the venue at 2:00 PM on Monday, 7th December.</div>
+  </div>
+</section>
+
+<section id="route" class="center">
+  <h2 class="rv">SEE THE<br>ROUTE</h2>
+  <p class="rv d1">Tap a venue to open the map</p>
+  <div class="venues">
+    <a class="venue rv d1" href="https://www.google.com/maps/search/?api=1&query=Vasundhara+Lawn+Sindhu+Nagar+Krishna+Nagar+Lucknow" target="_blank" rel="noopener">
+      <div class="ring"></div><h3 class="hi">तिलकोत्सव</h3>
+      <span>Vasundhara Lawn<br>Sindhu Nagar, Vijay Nagar, Krishna Nagar<br>Lucknow – 226023</span><em>Thu, 3rd Dec · 6:00 PM</em></a>
+    <a class="venue rv d2" href="https://www.google.com/maps/search/?api=1&query=Richa+Solitaire+Keshavpuram+Kalyanpur+Kanpur" target="_blank" rel="noopener">
+      <div class="ring"></div><h3 class="hi">शुभ विवाह</h3>
+      <span>Richa Solitaire<br>Keshavpuram Kalyanpur, Near K.D.M.A School<br>Keshavpuram, Kanpur</span><em>Mon, 7th Dec · Barat 2:00 PM</em></a>
+  </div>
+  <div class="car-front rv slideL" style="margin-top:34px"><img src="assets/car-teal-front.png" alt="Vintage teal car, front view"></div>
+</section>
+
+<section id="couple" class="center">
+  <div class="wrap">
+    <p class="eyebrow rv">Meet the</p>
+    <h2 class="rv d1">Groom and Bride</h2>
+    <p class="story rv d2">We are so delighted that you are able to join us in celebrating what we hope will be one of the happiest days of our lives. The love and blessings shown to us by family and friends have touched us deeply, and we thank everyone most sincerely for their kindness. We look forward to seeing you at the celebrations.</p>
+  </div>
+  <!-- To use real photos: replace the .arch contents with <img src="assets/groom.jpg" alt="Shashank"> -->
+  <div class="frame-row two">
+    <figure class="frame rv"><div class="arch photo"><img src="assets/groom.jpg" alt="Shashank Tripathi, the groom"></div><figcaption>Shashank Tripathi<small>The Groom</small></figcaption></figure>
+    <figure class="frame rv d1"><div class="arch photo"><img src="assets/bride.jpg" alt="Ekta Shukla, the bride"></div><figcaption>Ekta Shukla<small>The Bride</small></figcaption></figure>
+  </div>
+  <div class="fam wrap">
+    <div class="rv"><h3>Special Request</h3><p class="hi">विपिन कुमार त्रिपाठी<br>आदित्य कुमार त्रिपाठी<br>एवं समस्त त्रिपाठी परिवार</p></div>
+    <div class="rv d1"><h3>With Best Compliments From</h3><p class="hi">सौम्या त्रिपाठी<br>वैशाली त्रिपाठी<br>दिव्यांका त्रिपाठी<br>सुकृति त्रिपाठी<br>आहना त्रिपाठी</p></div>
+    <div class="rv d2"><h3>Eagerly Awaiting Your Presence</h3><p class="hi">महेन्द्र तिवारी<br>रितेश तिवारी<br>दीपक तिवारी<br>एवं समस्त त्रिपाठी परिवार</p></div>
+    <div class="rv d3"><h3>With Humble Regards</h3><p class="hi">अशोक कुमार तिवारी<br>ऋषि तिवारी<br>रविन्द्र तिवारी<br>अरविन्द तिवारी<br>विपिन कुमार त्रिपाठी<br>आदित्य कुमार त्रिपाठी<br>जितेन्द्र कुमार तिवारी</p></div>
+  </div>
+</section>
+
+<section id="rsvp" class="center">
+  <h2 class="rv">PLEASE<br>RSVP</h2>
+  <p class="rv d1">Tap to message the family on WhatsApp</p>
+  <a class="btn solid rv d2 wa" href="https://wa.me/916394081474?text=Hi!%20We%20will%20be%20attending%20Shashank%20%26%20Ekta%27s%20wedding." target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.7-1.1-4.4-3.8-4.6-4-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.100 1 2 1.300 2.300 1.400.3.1.5.1.7-.1l.9-1.100c.2-.3.4-.2.7-.1l1.900.9c.3.1.5.2.5.4.1.1.1.7-.1 1.300z"/></svg> RSVP on WhatsApp</a>
+  <p class="ctc rv">Or call us: <a href="tel:+916394081474">63940 81474</a> · <a href="tel:+919519603497">95196 03497</a><br>199, Pandit Kheda, Near Jaipuria School, Krishna Nagar, Lucknow – 226008</p>
+  <div class="vintage rv slideR"><img src="assets/car-black-front.png" alt="Vintage black car, front view"></div>
+</section>
+
+<section id="know" class="center">
+  <div class="wrap">
+    <h2 class="rv">Things to<br>Know</h2>
+    <p class="lead rv d1">To help you feel at ease and enjoy every moment of the celebrations, here are a few details we'd love for you to know before the big days.</p>
+    <div class="tiles">
+      <div class="tile rv"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 13v11l7 5"/></svg><h3>Timings</h3><p>The Barat proceeds from our residence to the venue at 2:00 PM on 7th December.</p></div>
+      <div class="tile rv d1"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11 11l4 4M33 33l4 4M37 11l-4 4M15 33l-4 4"/></svg><h3>Weather</h3><p>December is winter in Lucknow and Kanpur. Evenings can dip to around 8–10°C, so carry a shawl or jacket.</p></div>
+      <div class="tile rv d2"><svg viewBox="0 0 48 48"><path d="M6 30l4-12q2-4 6-4h16q4 0 6 4l4 12v8H6z"/><circle cx="14" cy="38" r="3"/><circle cx="34" cy="38" r="3"/></svg><h3>Travel</h3><p>Tilakotsav is in Lucknow and the wedding is in Kanpur, about 80 km apart. Allow 1.5–2 hours by road.</p></div>
+      <div class="tile rv d3"><svg viewBox="0 0 48 48"><path d="M13 8h8l4 10-5 3q3 7 10 10l3-5 10 4v8q0 3-3 3C22 39 9 26 9 11q0-3 4-3z"/></svg><h3>Need help?</h3><p>Call the family on <a href="tel:+916394081474">63940 81474</a> or <a href="tel:+919519603497">95196 03497</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="count" class="center">
+  <img class="bg" src="assets/night-palace.jpg" alt="Palace lit up at night under a crescent moon">
+  <div class="top">
+    <p class="eyebrow rv">The countdown begins</p>
+    <h2 class="fin rv d1">Shashank<em>WEDS</em>Ekta</h2>
+    <p class="when rv d2">Monday · 7th December 2026 · Kanpur</p>
+    <div class="clock rv d3" data-date="2026-12-07T14:00:00+05:30">
+      <div><b id="cd">00</b><span>Days</span></div><div><b id="ch">00</b><span>Hours</span></div><div><b id="cm">00</b><span>Mins</span></div><div><b id="cs">00</b><span>Secs</span></div>
+    </div>
+    <a class="btn solid rv d3" href="#rsvp" style="margin-top:28px">RSVP now</a>
+  </div>
+  <div class="fcar" id="fcar"><div class="drive"><img src="assets/car-arrive.png" alt="Vintage car arriving at the palace"><div class="glow"></div></div></div>
+</section>
+
+<footer>
+  <h3>Shashank <em>&amp;</em> Ekta</h3>
+  <p>7th December 2026 · Richa Solitaire, Kanpur</p>
+  <a class="btn" href="#rsvp">Confirm your presence</a>
+  <small>With love, <span class="hi">त्रिपाठी एवं शुक्ला परिवार</span> · © 2026</small>
+</footer>
+
+<script>
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+
+// word-by-word reveal (splits on spaces only so Devanagari conjuncts stay intact)
+(function(){
+  document.querySelectorAll('.wr,.small,.story,.lead,.note,.fam p,.tile p,.ev-txt p,#blessings .name .hn').forEach(el=>{
+    let i=0;
+    (function walk(n){
+      [...n.childNodes].forEach(c=>{
+        if(c.nodeType===3){
+          const f=document.createDocumentFragment();
+          c.textContent.split(/(\s+)/).forEach(p=>{ if(!p) return;
+            if(/^\s+$/.test(p)) f.appendChild(document.createTextNode(' '));
+            else{const sp=document.createElement('span');sp.className='w';sp.style.setProperty('--i',i++);sp.textContent=p;f.appendChild(sp);} });
+          c.replaceWith(f);
+        } else if(c.nodeType===1 && c.tagName!=='BR' && !c.classList.contains('w')) walk(c);
+      });
+    })(el);
+    el.classList.add('wr'); io.observe(el);
+  });
+})();
+// final page: car enters from the right and stops in the middle
+const fcar=document.getElementById('fcar');
+new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting) fcar.classList.add('go');
+  else fcar.classList.remove('go');
+}),{threshold:.35}).observe(document.getElementById('count'));
+
+// hero scroll scrub: palace, names, car move at different speeds
+const scene=document.getElementById('scene'),scene2=document.getElementById('scene2'),names=document.getElementById('names'),car=document.getElementById('car'),cue=document.querySelector('.scroll-cue');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const cl=v=>Math.min(1,Math.max(0,v)), lerp=(a,b,t)=>a+(b-a)*t, ease=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+function scrub(){
+  const vh=innerHeight,y=scrollY;
+  const p=reduce?.5:cl(y/(vh*1.05));
+  const e=ease(p);
+  // car: middle of the road -> right along the road, shrinking until it is out of the frame
+  car.style.left=lerp(50,118,Math.pow(e,1.1))+'%';
+  const land=innerWidth>innerHeight;car.style.top=lerp(land?112:96,76,Math.pow(e,.9))+'%';
+  car.style.transform=`translate(-50%,-100%) scale(${lerp(land?1.4:1.45,.09,Math.pow(e,.85))}) rotate(${-e*3}deg)`;
+  // names: lift away upward as the teal card rises
+  names.style.transform=`translateY(${-e*34*vh/100}px)`;
+  names.style.opacity=1-cl((p-.35)/.5);
+  scene.style.transform=scene2.style.transform=`translateX(-50%) scale(${1+e*.04})`;
+  cue.style.opacity=1-cl(y/(vh*.15));
+}
+addEventListener('scroll',()=>requestAnimationFrame(scrub),{passive:true});addEventListener('resize',scrub);scrub();
+// countdown
+const clock=document.querySelector('.clock'),target=new Date(clock.dataset.date).getTime();
+const p=n=>String(n).padStart(2,'0');
+function tick(){let d=Math.max(0,target-Date.now());
+  document.getElementById('cd').textContent=p(Math.floor(d/864e5));document.getElementById('ch').textContent=p(Math.floor(d%864e5/36e5));document.getElementById('cm').textContent=p(Math.floor(d%36e5/6e4));document.getElementById('cs').textContent=p(Math.floor(d%6e4/1e3));}
+tick();setInterval(tick,1000);
+
+// background music: loops forever; browsers block sound until the visitor interacts, so start on the first touch/click/scroll/key
+(function(){
+  const a=document.getElementById('bgm'),btn=document.getElementById('musicBtn');
+  a.volume=.6;let wanted=true;
+  const sync=()=>{const on=!a.paused;btn.classList.toggle('muted',!on);btn.setAttribute('aria-label',on?'Pause music':'Play music')};
+  const ev=['pointerdown','touchstart','keydown','wheel','scroll','click'];
+  function go(){ if(!wanted) return; a.play().then(()=>{ev.forEach(e=>removeEventListener(e,go,true));sync()}).catch(()=>{}) }
+  ev.forEach(e=>addEventListener(e,go,{capture:true,passive:true}));
+  a.play().then(()=>{ev.forEach(e=>removeEventListener(e,go,true));sync()}).catch(sync);
+  a.addEventListener('play',sync);a.addEventListener('pause',sync);
+  btn.addEventListener('click',e=>{e.stopPropagation();if(a.paused){wanted=true;a.play()}else{wanted=false;a.pause()}sync()});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)a.pause();else if(wanted)a.play().catch(()=>{})});
+})();
+</script>
+</body>
+</html>
