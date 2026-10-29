@@ -244,7 +244,7 @@ footer small{display:block;margin-top:26px;font-family:var(--sans);font-size:.68
 #count{padding:0;min-height:max(100svh,700px);justify-content:flex-start;background:#141538}
 #count .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%}
 #count:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,14,50,.78) 0%,rgba(14,14,50,.45) 38%,transparent 62%)}
-#count .top{position:relative;z-index:3;padding:84px 20px 0}
+#count .top{position:relative;z-index:4;padding:84px 20px 0}
 #count .fin{font-size:clamp(2.6rem,9vw,5.6rem);letter-spacing:.04em;text-shadow:0 3px 24px rgba(0,0,30,.7)}
 #count .fin em{display:block;font-family:var(--sans);font-style:normal;letter-spacing:.7em;font-size:.8rem;margin:6px 0 4px;padding-left:.7em}
 #count .when{font-family:var(--sans);font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;margin-top:14px;opacity:.9;text-shadow:0 1px 8px rgba(0,0,30,.8)}
@@ -266,8 +266,8 @@ footer small{display:block;margin-top:26px;font-family:var(--sans);font-size:.68
 #count .top{padding-top:64px}
 #count .fin{font-size:clamp(2.6rem,8vw,4.4rem)}
 @media(min-width:760px){#count .fin em{display:inline-block;margin:0 .9em;font-size:.85rem}#count .clock{margin-top:20px}}
-#count .fcar{width:clamp(320px,min(70vw,64vh),680px);bottom:4%}
-@media(max-width:600px){#count .fcar{bottom:4%;width:92vw}}
+#count .fcar{width:clamp(340px,64vw,920px);bottom:-9%;z-index:2}
+@media(max-width:600px){#count .fcar{bottom:0;width:112vw}}
 
 /* big cars rising from the bottom edge, cropped by the section */
 #route{padding-bottom:0}
@@ -281,20 +281,38 @@ footer small{display:block;margin-top:26px;font-family:var(--sans);font-size:.68
 #rsvp{
   background:url(assets/rsvp-bg.jpg) center/cover no-repeat;
 }
-/* background music */
-#musicBtn{position:fixed;right:16px;bottom:16px;z-index:100;width:46px;height:46px;border-radius:50%;border:1px solid rgba(247,240,196,.7);background:rgba(27,31,77,.62);color:var(--cream);display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 6px 18px rgba(0,0,0,.3);transition:.25s}
-#musicBtn:hover{background:rgba(27,31,77,.85)}
-#musicBtn svg{width:22px;height:22px}
-#musicBtn .off{display:none}
-#musicBtn.muted .on{display:none}#musicBtn.muted .off{display:block}
+
+/* ---------- MOBILE / OVERFLOW FIX ---------- */
+html{
+  overflow-x:hidden;               /* stops Chrome zooming the page out */
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:clip;
+}
+/* keep the "rising car" effect (overflow-y visible) but clip sideways */
+#route,#rsvp,#hero{
+  overflow-x:clip;
+  overflow-y:visible;
+}
+/* music button is removed; music plays automatically */
+#musicBtn{display:none!important}
+
+@media (max-width:600px){
+  section{padding:72px 16px}
+  .flower{width:100px}
+  .flower.a{left:-30px}
+  .flower.b{right:-30px}
+  .frame-row{margin:0 -16px}
+  .note{margin-top:40px;font-size:1.1rem;padding:16px 18px}
+}
 </style>
 </head>
 <body>
-<audio id="bgm" src="assets/music.mp3" loop preload="auto"></audio>
-<button id="musicBtn" type="button" aria-label="Pause music" title="Music on/off">
-  <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
-  <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/><path d="M3 3l18 18"/></svg>
-</button>
+<audio id="bgm" src="assets/music.mp3" loop autoplay playsinline preload="auto"></audio>
 
 <section id="hero"><div class="stage">
   <div class="scene" id="scene">
@@ -380,7 +398,6 @@ footer small{display:block;margin-top:26px;font-family:var(--sans);font-size:.68
     <h2 class="rv d1">Groom and Bride</h2>
     <p class="story rv d2">We are so delighted that you are able to join us in celebrating what we hope will be one of the happiest days of our lives. The love and blessings shown to us by family and friends have touched us deeply, and we thank everyone most sincerely for their kindness. We look forward to seeing you at the celebrations.</p>
   </div>
-  <!-- To use real photos: replace the .arch contents with <img src="assets/groom.jpg" alt="Shashank"> -->
   <div class="frame-row two">
     <figure class="frame rv"><div class="arch photo"><img src="assets/groom.jpg" alt="Shashank Tripathi, the groom"></div><figcaption>Shashank Tripathi<small>The Groom</small></figcaption></figure>
     <figure class="frame rv d1"><div class="arch photo"><img src="assets/bride.jpg" alt="Ekta Shukla, the bride"></div><figcaption>Ekta Shukla<small>The Bride</small></figcaption></figure>
@@ -397,7 +414,7 @@ footer small{display:block;margin-top:26px;font-family:var(--sans);font-size:.68
   <h2 class="rv">PLEASE<br>RSVP</h2>
   <p class="rv d1">Tap to message the family on WhatsApp</p>
   <a class="btn solid rv d2 wa" href="https://wa.me/916394081474?text=Hi!%20We%20will%20be%20attending%20Shashank%20%26%20Ekta%27s%20wedding." target="_blank" rel="noopener">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.7-1.1-4.4-3.8-4.6-4-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.100 1 2 1.300 2.300 1.400.3.1.5.1.7-.1l.9-1.100c.2-.3.4-.2.7-.1l1.900.9c.3.1.5.2.5.4.1.1.1.7-.1 1.300z"/></svg> RSVP on WhatsApp</a>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.2-.7-2.7-1.1-4.4-3.8-4.6-4-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg> RSVP on WhatsApp</a>
   <p class="ctc rv">Or call us: <a href="tel:+916394081474">63940 81474</a> · <a href="tel:+919519603497">95196 03497</a><br>199, Pandit Kheda, Near Jaipuria School, Krishna Nagar, Lucknow – 226008</p>
   <div class="vintage rv slideR"><img src="assets/car-black-front.png" alt="Vintage black car, front view"></div>
 </section>
@@ -493,18 +510,19 @@ function tick(){let d=Math.max(0,target-Date.now());
   document.getElementById('cd').textContent=p(Math.floor(d/864e5));document.getElementById('ch').textContent=p(Math.floor(d%864e5/36e5));document.getElementById('cm').textContent=p(Math.floor(d%36e5/6e4));document.getElementById('cs').textContent=p(Math.floor(d%6e4/1e3));}
 tick();setInterval(tick,1000);
 
-// background music: loops forever; browsers block sound until the visitor interacts, so start on the first touch/click/scroll/key
+// background music: autoplay, starts on the first touch if the browser blocks it
 (function(){
-  const a=document.getElementById('bgm'),btn=document.getElementById('musicBtn');
-  a.volume=.6;let wanted=true;
-  const sync=()=>{const on=!a.paused;btn.classList.toggle('muted',!on);btn.setAttribute('aria-label',on?'Pause music':'Play music')};
-  const ev=['pointerdown','touchstart','keydown','wheel','scroll','click'];
-  function go(){ if(!wanted) return; a.play().then(()=>{ev.forEach(e=>removeEventListener(e,go,true));sync()}).catch(()=>{}) }
-  ev.forEach(e=>addEventListener(e,go,{capture:true,passive:true}));
-  a.play().then(()=>{ev.forEach(e=>removeEventListener(e,go,true));sync()}).catch(sync);
-  a.addEventListener('play',sync);a.addEventListener('pause',sync);
-  btn.addEventListener('click',e=>{e.stopPropagation();if(a.paused){wanted=true;a.play()}else{wanted=false;a.pause()}sync()});
-  document.addEventListener('visibilitychange',()=>{if(document.hidden)a.pause();else if(wanted)a.play().catch(()=>{})});
+  const a=document.getElementById('bgm');
+  a.volume=.6;
+  const ev=['pointerup','touchend','click','keydown'];
+  function start(){
+    a.play().then(()=>ev.forEach(e=>removeEventListener(e,start,true))).catch(()=>{});
+  }
+  a.play().then(()=>ev.forEach(e=>removeEventListener(e,start,true))).catch(()=>{});
+  ev.forEach(e=>addEventListener(e,start,{capture:true,passive:true}));
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden)a.pause(); else a.play().catch(()=>{});
+  });
 })();
 </script>
 </body>
