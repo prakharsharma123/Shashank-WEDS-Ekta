@@ -244,7 +244,7 @@ footer small{display:block;margin-top:26px;font-family:var(--sans);font-size:.68
 #count{padding:0;min-height:max(100svh,700px);justify-content:flex-start;background:#141538}
 #count .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%}
 #count:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(14,14,50,.78) 0%,rgba(14,14,50,.45) 38%,transparent 62%)}
-#count .top{position:relative;z-index:4;padding:84px 20px 0}
+#count .top{position:relative;z-index:3;padding:84px 20px 0}
 #count .fin{font-size:clamp(2.6rem,9vw,5.6rem);letter-spacing:.04em;text-shadow:0 3px 24px rgba(0,0,30,.7)}
 #count .fin em{display:block;font-family:var(--sans);font-style:normal;letter-spacing:.7em;font-size:.8rem;margin:6px 0 4px;padding-left:.7em}
 #count .when{font-family:var(--sans);font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;margin-top:14px;opacity:.9;text-shadow:0 1px 8px rgba(0,0,30,.8)}
@@ -266,8 +266,8 @@ footer small{display:block;margin-top:26px;font-family:var(--sans);font-size:.68
 #count .top{padding-top:64px}
 #count .fin{font-size:clamp(2.6rem,8vw,4.4rem)}
 @media(min-width:760px){#count .fin em{display:inline-block;margin:0 .9em;font-size:.85rem}#count .clock{margin-top:20px}}
-#count .fcar{width:clamp(340px,64vw,920px);bottom:-9%;z-index:2}
-@media(max-width:600px){#count .fcar{bottom:0;width:112vw}}
+#count .fcar{width:clamp(320px,min(70vw,64vh),680px);bottom:4%}
+@media(max-width:600px){#count .fcar{bottom:4%;width:92vw}}
 
 /* big cars rising from the bottom edge, cropped by the section */
 #route{padding-bottom:0}
